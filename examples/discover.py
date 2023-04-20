@@ -6,9 +6,9 @@
 import redfish
 
 # Invoke the discovery routine for SSDP and print the responses
-def main():
-    print('call main before')
-    services = redfish.discover_ssdp()
-    print('call main after')
-    for service in services:
-        print( '{}: {}'.format(service, services[service]))
+
+print('call main before')
+services = redfish.discover_ssdp()
+print('call main after')
+for service in services:
+    print( '{}: {}'.format(service, services[service]))
