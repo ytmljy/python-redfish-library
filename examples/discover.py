@@ -8,5 +8,6 @@ import redfish
 # Invoke the discovery routine for SSDP and print the responses
 def main():
     services = redfish.discover_ssdp()
+    print('call main')
     for service in services:
         print( '{}: {}'.format(service, services[service]))
