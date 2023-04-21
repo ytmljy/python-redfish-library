@@ -114,5 +114,6 @@ def discover_ssdp(port=1900, ttl=2, response_time=3, iface=None, protocol="ipv4"
             break
 
     sock.close()
+    print('end ~~~~~~~~~~~~~~~')
     print(response)
     return discovered_services
