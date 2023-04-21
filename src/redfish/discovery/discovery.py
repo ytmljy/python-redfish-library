@@ -104,6 +104,7 @@ def discover_ssdp(port=1900, ttl=2, response_time=3, iface=None, protocol="ipv4"
     while True:
         try:
             response = http.client.HTTPResponse(FakeSocket(sock.recv(1024)))
+            print(response);
             response.begin()
             uuid_search = pattern.search(response.getheader("USN").lower())
             if uuid_search:
