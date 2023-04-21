@@ -102,6 +102,7 @@ def discover_ssdp(port=1900, ttl=2, response_time=3, iface=None, protocol="ipv4"
         "^uuid:([a-f0-9\-]*)::urn:dmtf-org:service:redfish-rest:1(:\d)?$") # noqa
     while True:
         try:
+            print('response start ~~~~~~~~~~~~~~~')
             response = http.client.HTTPResponse(FakeSocket(sock.recv(1024)))
             response.begin()
             uuid_search = pattern.search(response.getheader("USN").lower())
