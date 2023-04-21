@@ -8,7 +8,7 @@ import redfish
 # Invoke the discovery routine for SSDP and print the responses
 
 print('call main before')
-services = redfish.discover_ssdp(port=1900, ttl=10, response_time=10, iface='eth0', protocol="ipv4", address='172.31.39.254')
+services = redfish.discover_ssdp(port=1900, ttl=10, response_time=10, iface='eth0', protocol="ipv4", address=None)
 print('call main after')
 for service in services:
     print( '{}: {}'.format(service, services[service]))
