@@ -111,6 +111,7 @@ def discover_ssdp(port=1900, ttl=2, response_time=3, iface=None, protocol="ipv4"
                     "AL"
                 )
         except socket.timeout:
+            print('socket.timeout ~~~~~~~~~~~~~~~')
             # We hit the timeout; done waiting for responses
             break
 
