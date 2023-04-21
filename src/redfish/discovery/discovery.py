@@ -72,8 +72,7 @@ def discover_ssdp(port=1900, ttl=2, response_time=3, iface=None, protocol="ipv4"
         mcast_connection = (mcast_ip, port, 0, 0)
         af_type = socket.AF_INET6
     elif protocol == "ipv4":
-        #mcast_ip = "239.255.255.250"
-        mcast_ip = "224.0.0.1"
+        mcast_ip = "239.255.255.250"
         mcast_connection = (mcast_ip, port)
         af_type = socket.AF_INET
 
